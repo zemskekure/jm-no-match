@@ -1,96 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 100% 96%;
+    --foreground: 280 60% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 280 60% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 280 60% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 340 85% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 145 70% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 35 95% 60%;
+    --accent-foreground: 280 60% 20%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 45 30% 90%;
+    --muted-foreground: 280 30% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 280 20% 85%;
+    --input: 280 20% 85%;
+    --ring: 340 85% 65%;
 
-    --radius: 0.5rem;
+    --radius: 1.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom colors for the app */
+    --pink: 340 85% 65%;
+    --green: 145 70% 55%;
+    --yellow: 45 95% 60%;
+    --orange: 25 95% 60%;
+    --coral: 10 85% 65%;
+    --mint: 165 60% 70%;
+    --lavender: 280 50% 75%;
+    --cream: 45 100% 96%;
+    --deep-purple: 280 60% 25%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Gradients */
+    --gradient-pink: linear-gradient(135deg, hsl(340 85% 65%), hsl(320 80% 60%));
+    --gradient-green: linear-gradient(135deg, hsl(145 70% 55%), hsl(165 60% 50%));
+    --gradient-yellow: linear-gradient(135deg, hsl(45 95% 60%), hsl(35 90% 55%));
+    --gradient-orange: linear-gradient(135deg, hsl(25 95% 60%), hsl(10 90% 55%));
+    --gradient-celebration: linear-gradient(135deg, hsl(340 85% 65%), hsl(25 95% 60%), hsl(45 95% 60%));
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 280 60% 8%;
+    --foreground: 45 100% 96%;
+    --card: 280 50% 12%;
+    --card-foreground: 45 100% 96%;
+    --popover: 280 50% 12%;
+    --popover-foreground: 45 100% 96%;
+    --primary: 340 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 145 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 35 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 280 40% 20%;
+    --muted-foreground: 280 20% 70%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 280 40% 25%;
+    --input: 280 40% 25%;
+    --ring: 340 85% 65%;
   }
 }
 
@@ -100,6 +84,49 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-nunito antialiased;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .bg-pink {
+    background-color: hsl(var(--pink));
+  }
+  .bg-green {
+    background-color: hsl(var(--green));
+  }
+  .bg-yellow {
+    background-color: hsl(var(--yellow));
+  }
+  .bg-orange {
+    background-color: hsl(var(--orange));
+  }
+  .bg-coral {
+    background-color: hsl(var(--coral));
+  }
+  .bg-mint {
+    background-color: hsl(var(--mint));
+  }
+  .bg-lavender {
+    background-color: hsl(var(--lavender));
+  }
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  .text-deep-purple {
+    color: hsl(var(--deep-purple));
+  }
+  .bg-gradient-celebration {
+    background: var(--gradient-celebration);
+  }
+  .shadow-playful {
+    box-shadow: 0 8px 0 hsl(var(--deep-purple) / 0.15);
+  }
+  .shadow-card {
+    box-shadow: 0 12px 40px hsl(var(--deep-purple) / 0.1);
   }
 }
